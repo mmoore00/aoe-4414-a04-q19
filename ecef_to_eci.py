@@ -72,7 +72,7 @@ GMST_s = 67310.54841 + ((876600.0 * 60.0 * 60.0 + 8640184.812866) * TUT1) + (0.0
 GMST_angle = math.fmod(GMST_s, 86400.0) * w
 GMST_angle = math.fmod((GMST_angle + (2.0 * math.pi)), (2.0 * math.pi))
 
-# calculate the ECEF values given ECI and GMST angle
+# calculate the ECI values given ECEF and GMST angle
 RzGMST = [[math.cos(-GMST_angle), math.sin(-GMST_angle), 0], [-math.sin(-GMST_angle), math.cos(-GMST_angle), 0], [0, 0, 1]]
 rECEF = [ecef_x_km, ecef_y_km, ecef_z_km]
 
